@@ -1,3 +1,5 @@
-export const MyComponent = () =>{
-    return <h1>Hello from MyComponent</h1>
+function Greet(props){
+     return <h2>Welcome {props.name}!</h2>
 }
+
+export default Greet;
