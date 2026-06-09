@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 function Counter(props) {
      const [count, setCount] = useState(0);
      const items = ['Pavi', 'Pintuu', 'Azhagi'];
+     const values = ['1','2','3'];
      const [data, setData] = useState("Loading...");
      const [isLoading, setIsLoading] = useState(true);
      const familyList = items.map((name, index) => name.includes("i") ? <p key={index}>{index}:{name}</p> : null);
@@ -24,6 +25,11 @@ function Counter(props) {
                     <button>{count}</button>
                     {/* Conditional Rendering in Lists */}
                     {count == 4 ? <h2>Our Family List {familyList}</h2> : null} </>)}
+               
+               <h4>Display Numbers</h4>
+               <ul>
+                    {values.map((index, value)=> <li key={index}>{value}</li>)}
+               </ul>
           </div>
      );
 }
