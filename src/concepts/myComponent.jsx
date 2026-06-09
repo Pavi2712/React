@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
+export const UserContext = createContext()
 
 function Counter(props) {
      const [count, setCount] = useState(0);
