@@ -1,10 +1,15 @@
 import { useContext } from "react";
 import { UserContext } from "./myComponent";
 
-function GrandChild(){
-    const userName = useContext(UserContext);
+export const Parent = () =>{
     return(
-            <p>Hello..........{userName}</p>
+        <GrandChild />
     )
 }
-export default GrandChild;
+
+export const GrandChild =()=>{
+    const userName = useContext(UserContext);
+    return(
+            <p>Hii{userName}</p>
+    )
+}
